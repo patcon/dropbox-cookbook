@@ -24,16 +24,13 @@ when "ubuntu","debian"
     action :nothing
   end
 
-  bash "add Dropbox key" do
-    code "apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E"
-    action :nothing
+  apt_repository "dropbox" do
+    uri "http://linux.dropbox.com/ubuntu"
+    distribution node['lsb']['codename']
+    components ["main"]
+    keyserver "pgp.mit.edu"
+    key "5044912E"
     notifies :run, resources(:bash => "apt-get update"), :immediately
-  end
-
-  template "/etc/apt/sources.list.d/dropbox.list" do
-    source "dropbox.list.erb"
-    mode 0644
-    notifies :run, resources(:bash => "add Dropbox key"), :immediately
   end
 
   package "nautilus-dropbox"
