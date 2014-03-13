@@ -27,6 +27,7 @@ when "ubuntu","debian"
     key "5044912E"
   end
 
+  package "python-gpgme"
   package "dropbox"
 when "arch"
   include_recipe "pacman"
