@@ -9,7 +9,7 @@ Recipes
 default
 -------
 
-This recipe installs the `nautilus-dropbox` package in Ubuntu, and the
+This recipe installs the `dropbox` package on Debian/Ubuntu, and the
 `dropbox-daemon` package in Arch.
 
 In Ubuntu/Debian, this cookbook depends on the `apt` cookbook.
