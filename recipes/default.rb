@@ -17,16 +17,15 @@
 # limitations under the License.
 #
 
-case node[:platform]
-when "ubuntu","debian"
+case node[:platform_family]
+when "debian"
   apt_repository "dropbox" do
-    uri "http://linux.dropbox.com/ubuntu"
+    uri "http://linux.dropbox.com/#{node[:platform]}"
     distribution node['lsb']['codename']
     components ["main"]
     keyserver "pgp.mit.edu"
     key "5044912E"
   end
-
   package "python-gpgme"
   package "dropbox"
 when "arch"
