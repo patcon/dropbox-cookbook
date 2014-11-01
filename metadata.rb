@@ -1,3 +1,4 @@
+name             "dropbox"
 maintainer       "Chris Peplin"
 maintainer_email "chris.peplin@rhubarbtech.com"
 license          "Apache 2.0"
