@@ -1,6 +1,7 @@
 maintainer       "Chris Peplin"
 maintainer_email "chris.peplin@rhubarbtech.com"
 license          "Apache 2.0"
+name             "dropbox-cookbook"
 description      "Installs/configures Dropbox packages"
 version          "0.2"
 depends "pacman"
